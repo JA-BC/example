@@ -120,12 +120,20 @@
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="bi bi-envelope"></i>
-                  <p class="text-white" style="margin-top: .75rem;">info@example.com</p>
+                  <p style="margin-top: .75rem;">
+                    <a class="text-white" href="mailto:info@example.com">
+                      info@example.com
+                    </a>
+                  </p>
                 </div>
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="bi bi-phone"></i>
-                  <p class="text-white" style="margin-top: .75rem;">+1 5589 55488 51</p>
+                  <p style="margin-top: .75rem;">
+                    <a class="text-white" href="tel:000">
+                      +1 5589 55488 51
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -143,7 +151,7 @@
           <div class="col-lg-6">
             <div class="card card-contact">
               <div class="card-body">
-                <form>
+                <form name="contacto" action="enviado" method="POST" data-netlify="true">
                   <div class="row gy-4">
                     <div class="col-lg-6">
                       <div class="input-group">
@@ -151,7 +159,7 @@
                           <i class="bi bi-people"></i>
                         </span>
 
-                        <input type="text" class="form-control" placeholder="Nombre">
+                        <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
                       </div>
                     </div>
 
@@ -161,7 +169,7 @@
                           <i class="bi bi-envelope"></i>
                         </span>
 
-                        <input type="text" class="form-control" placeholder="Correo Electrónico">
+                        <input type="email" name="correo" class="form-control" placeholder="Correo Electrónico" required>
                       </div>
                     </div>
 
@@ -171,12 +179,12 @@
                           <i class="bi bi-telephone"></i>
                         </span>
 
-                        <input type="tel" class="form-control" placeholder="Número de telefono">
+                        <input type="tel" name="telefono" class="form-control" placeholder="Número de telefono" required>
                       </div>
                     </div>
 
                     <div class="col-lg-12">
-                      <textarea cols="30" rows="10" class="form-control" placeholder="Mensaje"></textarea>
+                      <textarea name="mensaje" cols="30" rows="10" class="form-control" placeholder="Mensaje" required></textarea>
                     </div>
 
                     <div class="col-lg-12 d-grid">
